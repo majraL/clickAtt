@@ -1,0 +1,28 @@
+.o-partners {
+  padding-bottom: 50px;
+  border-top: 1px solid lightgrey;
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &_item {
+      flex: 0 0 13%;
+      padding: 10px;
+      border: 1px solid lightgrey;
+      border-radius: 7px;
+      background-color: #F6F6F6;
+    }
+
+  }
+
+  &-btn_wrapper {
+    position: absolute;
+    top: -38px;
+    right: 0;
+    padding: 15px;
+    background-color: $white;
+  }
+
+}

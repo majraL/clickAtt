@@ -1,0 +1,123 @@
+// Link
+.c-link {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    @extend %decoration-underline;
+  }
+
+  &-underline {
+    @extend %decoration-underline;
+  }
+
+  &.logo-header {
+    height: 80px;
+  }
+
+  // -------------------------------------Default main menu styles START------------------------------------------------
+  $padding-right-sub: .75rem; /* 6.31/16 */
+
+  .o-mainNav_item & {
+    display: block;
+    padding: 1.1875rem $padding-right-sub;
+    color: #87898C;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    @include laptop {
+      padding: 1.938rem $padding-right-sub;
+      transition: color 200ms;
+
+      &:hover {
+        color: $brand-primary;
+      }
+
+    }
+
+  }
+
+  .o-mainNav_list > .o-mainNav_item:not(:last-child) & {
+
+    @include laptopDown {
+      border-bottom: 1px solid #E4E4E4;
+    }
+
+  }
+  // -------------------------------------Default main menu styles STOP-------------------------------------------------
+
+  .o-target-list_item & {
+    @include font-size(14);
+    display: block;
+    height: 100%;
+    padding: 10px 15px;
+    border: 1px solid $white;
+    border-radius: 5px;
+    background-color: rgba($white, 0);
+    color: $white;
+    opacity: .85; 
+    text-align: center;
+    transform: scaleY(1);
+
+    &:hover {
+      @extend %decoration-none;
+      opacity: 1;
+    }
+
+  }
+
+  .o-target-list_item.active & {
+    position: relative;
+    opacity: 1;
+    background-color: $white;
+    color: $brand-primary;
+    transform: scaleY(1.1);
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      right: -1px;
+      left: -1px;
+      height: 5px;
+      border-radius: 25px;
+      background-color: lighten($brand-primary, 20%);
+    }
+
+  }
+
+  .o-contact-list_item & {
+    color: $white;
+  }
+
+  .o-share-list & {
+    @extend %no-repeat;
+    @extend %bg-contain;
+    @extend %bg-center;
+    width: 35px;
+    height: 35px;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &.facebook {
+      background-image: url('../media/app/facebook.svg');
+    }
+    
+    &.linkedin {
+      background-image: url('../media/app/linkedin.svg');
+    }
+    
+    &.twitter {
+      background-image: url('../media/app/twitter.svg');
+    }
+    
+  }
+
+  .o-mainFooter_copyright & {
+    @extend %decoration-underline;
+  }
+
+}

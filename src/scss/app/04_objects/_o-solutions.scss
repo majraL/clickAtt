@@ -1,0 +1,16 @@
+.o-solutions {
+  padding: 80px 0;
+
+  &-item {
+    text-align: center;
+
+    &_about {
+      @include font-size(14);
+      min-height: 63px;
+      margin: 20px 0 25px;
+      line-height: 21px;
+    }
+
+  }
+
+}

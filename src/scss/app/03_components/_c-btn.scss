@@ -1,0 +1,146 @@
+// Buttons
+
+// Global settings
+$btn-padding-y: .6875rem;
+$btn-padding-x: 1rem;
+$btn-border-radius: 25px;
+$btn-font-size: 16px;
+$btn-font-weight: $font-weight-bold;
+
+// Primary button settings
+$btn-primary-bg: $white;
+$btn-primary-bg-hover: $brand-primary;
+
+$btn-primary-color: $brand-primary;
+$btn-primary-color-hover: $white;
+
+$btn-primary-border-width: 1px;
+$btn-primary-border-width-hover: $btn-primary-border-width;
+$btn-primary-border-style: solid;
+$btn-primary-border-style-hover: $btn-primary-border-style;
+$btn-primary-border-color: $brand-primary;
+$btn-primary-border-color-hover: $brand-primary;
+
+
+// Secondary button settings
+$btn-secondary-bg: $brand-secondary;
+$btn-secondary-bg-hover: darken($brand-secondary, 10%);
+
+$btn-secondary-color: $white;
+$btn-secondary-color-hover: $white;
+
+$btn-secondary-border-width: 0;
+$btn-secondary-border-width-hover: $btn-secondary-border-width;
+$btn-secondary-border-style: solid;
+$btn-secondary-border-style-hover: $btn-secondary-border-style;
+$btn-secondary-border-color: $brand-primary;
+$btn-secondary-border-color-hover: darken($btn-secondary-border-color, 10%);
+
+.c-btn {
+  @include transition($time: 175ms);
+  display: inline-flex;
+  justify-content: center;
+  border-radius: $btn-border-radius;
+  padding: $btn-padding-y $btn-padding-x;
+  font-size: $btn-font-size;
+  font-family: $btn-font-weight;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-touch-callout: none;
+  box-shadow: 0 6px 8px 2px rgba(205,205,205, .50);
+
+  &, &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  @include print {
+    display: none;
+  }
+
+  @include tabletDown {
+    width: 100%;
+  }
+
+  &-primary {
+    background-color: rgba($white, 0);
+    color: $btn-primary-color;
+    border-width: $btn-primary-border-width;
+    border-style: $btn-primary-border-style;
+    border-color: $btn-primary-border-color;
+
+    &:hover {
+      background-color: $btn-primary-bg-hover;
+      color: $btn-primary-color-hover;
+      border-color: $btn-primary-border-color-hover;
+    }
+
+  }
+
+  &-secondary {
+    @extend %no-repeat;
+    position: relative;
+    background-color: $btn-secondary-bg;
+    color: $btn-secondary-color;
+    padding: .5rem 4rem .5rem 2rem;
+    border-width: $btn-secondary-border-width;
+    border-style: $btn-secondary-border-style;
+    border-color: $btn-secondary-border-color;
+    text-transform: uppercase;
+    background-image: url('../media/app/desktop-white.svg');
+    background-position: 90% center;
+    background-size: 25px;
+
+    &:hover {
+      background-color: $btn-secondary-bg-hover;
+      color: $btn-secondary-color-hover;
+      border-color: $btn-secondary-border-color-hover;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: -4px;
+      right: -4px;
+      bottom: -4px;
+      left: -4px;
+      border: 1px solid $btn-secondary-bg;
+      border-radius: 25px;
+    }
+
+  }
+
+  .o-solutions-item & {
+    position: relative;
+    width: 100%;
+
+    @include laptop {
+      width: 75%;
+    }
+
+  }
+
+  .o-contact & {
+    width: 40%;
+    border-color: $white;
+    color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: darken($brand-primary, 20%);
+    }
+
+  }
+
+}
+
+button {
+
+  &:hover {
+    cursor: pointer;
+  }
+
+}

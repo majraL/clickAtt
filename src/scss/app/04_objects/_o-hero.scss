@@ -1,0 +1,33 @@
+.o-hero {
+  position: relative;
+  padding: 90px 0;
+  color: $white;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba($black, .3);
+  overflow: hidden;
+
+  &_overlay {
+    @extend %no-repeat;
+    @extend %bg-cover;
+    @extend %bg-center;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    filter: blur(5px);
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 190px;
+  }
+
+  &_sub {
+    padding-top: 20px;
+    border-top: 1px solid rgba($white, .5);
+    margin-top: 20px;
+  }
+
+}

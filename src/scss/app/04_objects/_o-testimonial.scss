@@ -1,0 +1,108 @@
+.o-testimonial {
+  padding-top: 50px;
+
+  &_container {
+    position: relative;
+    padding: 35px 0 50px;
+    border-top: 1px solid lightgrey;
+    margin: 35px 0 50px;
+  }
+
+  &_wrapper {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &_item {
+    flex: 0 0 100%;
+    order: 1;
+    padding-right: 80px;
+    white-space: normal;
+
+    &.active {
+      order: 0;
+    }
+
+  }
+
+  &-article {
+    display: flex;
+
+    &_img {
+      flex: 0 0 20%;
+    }
+
+    &_about {
+      flex: 0 0 80%;
+      margin-left: 30px;
+      line-height: 24px;
+    }
+
+  }
+
+  &_btn-wrapper {
+    position: absolute;
+    top: -20px;
+    right: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: $white;
+  }
+
+  &_btn {
+    @extend %no-repeat;
+    @extend %bg-center;
+    width: 35px;
+    height: 30px;
+    background-size: 30px;
+    opacity: .6;
+
+    &:hover {
+      @extend %cursor-pointer;
+      opacity: 1;
+    }
+
+    &.next {
+      background-image: url('../media/app/chevron-right.svg');
+    }
+
+    &.previous {
+      background-image: url('../media/app/chevron-right.svg');
+      transform: rotate(180deg);
+    }
+    
+  }
+
+  &_pagination {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    display: flex;
+    transform: translateX(-50%);
+
+    .bullet {
+      width: 10px;
+      height: 10px;
+      border: 1px solid lightgrey;
+      border-radius: 50%;
+      background-color: $white;
+
+      &:hover {
+        @extend %cursor-pointer;
+      }
+
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+
+      &.active {
+        background-color: lightgrey;
+      }
+
+    }
+
+  }
+
+}

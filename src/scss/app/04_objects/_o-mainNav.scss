@@ -1,0 +1,49 @@
+// Main navigation
+.o-mainNav {
+
+  @include laptopDown {
+
+    &_list {
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      left: 0;
+      background-color: rgba($white, .95);
+      opacity: 0;
+      transform: translateY(-20%);
+      pointer-events: none;
+      transition: opacity 175ms, transform 200ms;
+
+      &.active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: all;
+      }
+
+    }
+
+    &_trigger-sub {
+      top: 0;
+      right: 0;
+      width: 20%;
+      height: 58px;
+      transform: rotate(0);
+      transition: transform 250ms;
+
+      &.active {
+        transform: rotate(180deg);
+      }
+
+    }
+
+  }
+
+  @include laptop {
+
+    &_list {
+      display: flex;
+    }
+
+  }
+
+}

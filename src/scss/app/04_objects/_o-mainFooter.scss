@@ -1,0 +1,18 @@
+// Main footer
+.o-mainFooter {
+  padding: 30px 0;
+
+  &-list {
+    display: flex;
+
+    &_item:not(:last-child) {
+      margin-right: 20px;
+    }
+
+  }
+
+  &_copyright {
+    @include font-size(12);
+  }
+
+}

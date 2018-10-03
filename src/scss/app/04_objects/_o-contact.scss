@@ -1,0 +1,40 @@
+.o-contact {
+  position: relative;
+  padding: 50px 0 100px;
+  overflow: hidden;
+
+  &_overlay {
+    @extend %no-repeat;
+    @extend %bg-cover;
+    @extend %bg-center;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    filter: blur(5px);
+  }
+
+  &-list {
+    padding-right: 50px;
+    color: $white;
+
+    &_item {
+      @include font-size(15);
+
+      &:not(:last-child) {
+        padding-bottom: 7px;
+        border-bottom: 1px solid rgba($white, .5);
+        margin-bottom: 7px;
+      }
+
+      .type {
+        display: inline-block;
+        width: 25%;
+      }
+
+    }
+
+  }
+
+}

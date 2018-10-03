@@ -1,0 +1,83 @@
+// Main Header
+.o-mainHeader {
+  background-color: $white;
+
+  &_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-btn_wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+  }
+
+  @include laptopDown {
+
+    &_navTrigger {
+      position: relative;
+      width: 33px;
+      height: 19px;
+      padding: 2.1875rem 2.375rem;
+    
+      span {
+        top: 0;
+        bottom: 0;
+        max-width: 33px;
+        margin: auto;
+    
+        &, &:before, &:after {
+          @include transition($time: 175ms);
+          position: absolute;
+          right: 0;
+          left: 0;
+          height: 3px;
+          border-radius: 3px;
+          background-color: $brand-primary;
+        }
+    
+        &:before, &:after {
+          content: '';
+          transform: translateY(0);
+        }
+    
+        &:before {
+          top: -.55em;
+        }
+    
+        &:after {
+          bottom: -.55em;
+        }
+    
+      }
+    
+      &.active span {
+        background-color: transparent;
+    
+        &:before {
+          transform: translateY(8px) rotate(45deg);
+        }
+    
+        &:after {
+          transform: translateY(-9px) rotate(-45deg);
+        }
+    
+      }
+    
+    
+    }    
+
+  }
+
+  @include laptop {
+
+    &_nav {
+      display: flex;
+      padding-right: 1.5625rem;
+    }
+
+  }
+
+}

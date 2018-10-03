@@ -1,0 +1,50 @@
+// Icons
+
+.c-icon {
+  display: inline-block;
+  line-height: 0;
+
+  &.desktop {
+    @extend .svg-desktop;
+    width: 40px;
+    height: 40px;
+  }
+
+  &.link {
+    @extend .svg-link;
+    @extend .svg-link-dims;
+  }
+
+  .o-solutions-item & {
+    margin-right: 10px;
+  }
+
+  .o-solutions-item .c-btn & {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    width: 20px;
+    transform: translateY(-50%);
+    fill: $brand-primary;
+    transition: fill 175ms;
+  }
+
+  .o-solutions-item .c-btn:hover & svg path {
+    fill: $white;
+  }
+
+  .o-target-list_item & {
+    margin-top: 10px;
+    transform: translateY(0);
+    transition: transform 175ms;
+  }
+
+  .o-target-list_item:not(.active) .c-link:hover & {
+    transform: translateY(-2px);
+  }
+
+  .o-target-list_item.active .c-link & svg path:last-child {
+    fill: $brand-primary;
+  }
+
+}

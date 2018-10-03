@@ -1,0 +1,35 @@
+// Titles
+.c-ttl {
+  margin: 0;
+
+  &-hero {
+    @include font-size(48);
+
+    .sub {
+      @include font-size(33);
+      display: block;
+    }
+
+  }
+
+  .o-solutions-item & {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .o-target_top & {
+    margin-bottom: 35px;
+  }
+
+  .o-partners & {
+    padding: 30px 0;
+  }
+
+  .o-contact & {
+    margin-bottom: 25px;
+    color: $white;
+    font-weight: 300;
+  }
+  
+}
