@@ -158,7 +158,7 @@ html {
   margin-left: auto; }
   @media (min-width: 1025px) {
     .container {
-      max-width: 1055px; } }
+      max-width: 1030px; } }
 
 .container-fluid {
   width: 100%;
@@ -1533,7 +1533,7 @@ html {
     position: relative;
     background-color: #ED8D33;
     color: #ffffff;
-    padding: .5rem 4rem .5rem 2rem;
+    padding: .5rem 3.5rem .5rem 1.5rem;
     border-width: 0;
     border-style: solid;
     border-color: #47B6A1;
@@ -1562,7 +1562,7 @@ html {
       .o-solutions-item .c-btn {
         width: 75%; } }
   .o-contact .c-btn {
-    width: 40%;
+    width: 45%;
     border-color: #ffffff;
     color: #ffffff; }
     .o-contact .c-btn:hover {
@@ -1647,6 +1647,8 @@ button:hover {
   display: block;
   width: 100%;
   height: 100%; }
+  .logo-header .c-img {
+    width: auto; }
 
 .c-link {
   display: inline-block;
@@ -1654,7 +1656,7 @@ button:hover {
   text-decoration: none;
   /* 6.31/16 */ }
   .c-link.logo-header {
-    height: 80px; }
+    height: 95px; }
   .o-mainNav_item .c-link {
     display: block;
     padding: 1.1875rem 0.75rem;
@@ -1716,9 +1718,9 @@ button:hover {
 .c-ttl {
   margin: 0; }
   .c-ttl-hero {
-    font-size: 3rem; }
+    font-size: 3.4375rem; }
     .c-ttl-hero .sub {
-      font-size: 2.0625rem;
+      font-size: 2.25rem;
       display: block; }
   .o-solutions-item .c-ttl {
     display: flex;
@@ -1730,8 +1732,7 @@ button:hover {
     padding: 30px 0; }
   .o-contact .c-ttl {
     margin-bottom: 25px;
-    color: #ffffff;
-    font-weight: 300; }
+    color: #ffffff; }
 
 /*------------------------------------------------------------------------------------
   04_objects
@@ -1742,11 +1743,11 @@ button:hover {
   overflow: hidden; }
   .o-contact_overlay {
     position: absolute;
-    top: -5px;
-    right: -5px;
-    bottom: -5px;
-    left: -5px;
-    filter: blur(5px); }
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    filter: blur(10px); }
   .o-contact-list {
     padding-right: 50px;
     color: #ffffff; }
@@ -1765,26 +1766,27 @@ button:hover {
 
 .o-hero {
   position: relative;
-  padding: 90px 0;
+  padding: 125px 0;
   color: #ffffff;
   text-align: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   overflow: hidden; }
   .o-hero_overlay {
     position: absolute;
-    top: -5px;
-    right: -5px;
-    bottom: -5px;
-    left: -5px;
-    filter: blur(5px); }
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    filter: blur(10px); }
   .o-hero_content {
     display: flex;
     flex-direction: column;
-    padding: 0 190px; }
+    padding: 0 100px; }
   .o-hero_sub {
-    padding-top: 20px;
+    font-size: 1.375rem;
+    padding-top: 25px;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
-    margin-top: 20px; }
+    margin-top: 25px; }
 
 .o-mainFooter {
   padding: 30px 0; }
@@ -1886,8 +1888,8 @@ button:hover {
       background-color: #F6F6F6; }
   .o-partners-btn_wrapper {
     position: absolute;
-    top: -38px;
-    right: 0;
+    top: -35px;
+    right: 15px;
     padding: 15px;
     background-color: #ffffff; }
 
@@ -1902,6 +1904,7 @@ button:hover {
     .o-solutions-item_about {
       font-size: 0.875rem;
       min-height: 63px;
+      padding: 0 10px;
       margin: 20px 0 25px;
       line-height: 21px; }
 
@@ -1962,24 +1965,25 @@ button:hover {
     position: relative;
     padding: 35px 0 50px;
     border-top: 1px solid lightgrey;
-    margin: 35px 0 50px; }
+    margin: 25px 0 50px; }
   .o-testimonial_wrapper {
     display: flex;
+    margin-right: 40px;
     overflow: hidden;
     white-space: nowrap; }
   .o-testimonial_item {
     flex: 0 0 100%;
     order: 1;
-    padding-right: 80px;
+    padding-right: 40px;
     white-space: normal; }
     .o-testimonial_item.active {
       order: 0; }
   .o-testimonial-article {
     display: flex; }
     .o-testimonial-article_img {
-      flex: 0 0 20%; }
+      flex: 0 0 16%; }
     .o-testimonial-article_about {
-      flex: 0 0 80%;
+      flex: 0 0 84%;
       margin-left: 30px;
       line-height: 24px; }
   .o-testimonial_btn-wrapper {
@@ -1994,7 +1998,7 @@ button:hover {
     width: 35px;
     height: 30px;
     background-size: 30px;
-    opacity: .6; }
+    opacity: .4; }
     .o-testimonial_btn:hover {
       opacity: 1; }
     .o-testimonial_btn.next {
@@ -2011,13 +2015,13 @@ button:hover {
     .o-testimonial_pagination .bullet {
       width: 10px;
       height: 10px;
-      border: 1px solid lightgrey;
+      border: 1px solid #BABABA;
       border-radius: 50%;
       background-color: #ffffff; }
       .o-testimonial_pagination .bullet:not(:last-child) {
         margin-right: 8px; }
       .o-testimonial_pagination .bullet.active {
-        background-color: lightgrey; }
+        background-color: #BABABA; }
 
 /*------------------------------------------------------------------------------------
   05_trumps
@@ -2046,3 +2050,6 @@ button:hover {
 
 .color-prim {
   color: #47B6A1; }
+
+.font-weight-light {
+  font-weight: 300; }

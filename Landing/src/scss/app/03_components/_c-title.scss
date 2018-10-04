@@ -3,10 +3,10 @@
   margin: 0;
 
   &-hero {
-    @include font-size(48);
+    @include font-size(55);
 
     .sub {
-      @include font-size(33);
+      @include font-size(36);
       display: block;
     }
 
@@ -29,7 +29,6 @@
   .o-contact & {
     margin-bottom: 25px;
     color: $white;
-    font-weight: 300;
   }
   
 }

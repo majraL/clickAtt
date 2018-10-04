@@ -84,7 +84,7 @@ $btn-secondary-border-color-hover: darken($btn-secondary-border-color, 10%);
     position: relative;
     background-color: $btn-secondary-bg;
     color: $btn-secondary-color;
-    padding: .5rem 4rem .5rem 2rem;
+    padding: .5rem 3.5rem .5rem 1.5rem;
     border-width: $btn-secondary-border-width;
     border-style: $btn-secondary-border-style;
     border-color: $btn-secondary-border-color;
@@ -124,7 +124,7 @@ $btn-secondary-border-color-hover: darken($btn-secondary-border-color, 10%);
   }
 
   .o-contact & {
-    width: 40%;
+    width: 45%;
     border-color: $white;
     color: $white;
 

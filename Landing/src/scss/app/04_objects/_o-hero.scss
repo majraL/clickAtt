@@ -1,6 +1,6 @@
 .o-hero {
   position: relative;
-  padding: 90px 0;
+  padding: 125px 0;
   color: $white;
   text-align: center;
   text-shadow: 1px 1px 1px rgba($black, .3);
@@ -11,23 +11,24 @@
     @extend %bg-cover;
     @extend %bg-center;
     position: absolute;
-    top: -5px;
-    right: -5px;
-    bottom: -5px;
-    left: -5px;
-    filter: blur(5px);
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    filter: blur(10px);
   }
 
   &_content {
     display: flex;
     flex-direction: column;
-    padding: 0 190px;
+    padding: 0 100px;
   }
 
   &_sub {
-    padding-top: 20px;
+    @include font-size(22);
+    padding-top: 25px;
     border-top: 1px solid rgba($white, .5);
-    margin-top: 20px;
+    margin-top: 25px;
   }
 
 }

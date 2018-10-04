@@ -15,7 +15,6 @@ Source files are located in
 * ```src/scss/app``` for SCSS
 * ```src/media/*``` for PNGs, SVGs, ...
 * ```src/css``` for unminified CSS
-* ```src/js``` for unminified JS
 
 
 # View without running the environment
