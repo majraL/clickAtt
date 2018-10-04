@@ -75,26 +75,6 @@ gulp.task('html', function () {
 //----------------------------------------------------------------------------------------------------------------------
 
 
-//-----------------------------------------------Build javascript task--------------------------------------------------
-gulp.task('js', function () {
-  return gulp.src([
-      'src/scripts/**/*.js'
-    ])
-  
-    .pipe(babel({ compact: false }))
-    .pipe(concat('app.js'))
-    .pipe(gulp.dest('src/js/app/'))
-
-    .pipe(concat('main.js'))
-    .pipe(uglify().on('error', function(err) {return notify().write(err);}))
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest('build/js'))
-  });
-//----------------------------------------------------------------------------------------------------------------------
-
-
 //------------------------------------------------------TinyPNG task----------------------------------------------------
 gulp.task('png', function() {
   return gulp.src(['src/media/**/*.png', 'src/media/**/*.jpg'])
@@ -151,7 +131,6 @@ gulp.task('zip', function () {
 gulp.task('watch', function () {
   gulp.watch(['src/media/**/*.svg', '!src/media/sprite/*.svg'], ['svg']).on('change', browserSync.reload);
   gulp.watch('src/media/**/*.png', ['png']).on('change', browserSync.reload);
-  gulp.watch('src/scripts/**/*.js', ['js']).on('change', browserSync.reload);
   gulp.watch('src/scss/**/*.scss', ['css']).on('change', browserSync.reload);
   gulp.watch('src/html/**/*.html', ['html']).on('change', browserSync.reload);
 });
@@ -169,7 +148,6 @@ gulp.task('app', [
   'png',
   'svg',
   'css',
-  'js',
   'html',
   'browser-sync',
   'watch'], function(app){

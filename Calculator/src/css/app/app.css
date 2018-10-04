@@ -1,0 +1,115 @@
+/*------------------------------------------------------------------------------------
+  01_settings
+------------------------------------------------------------------------------------*/
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none; }
+
+html, body {
+  font-size: 24px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: grey; }
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh; }
+
+/*------------------------------------------------------------------------------------
+  05_objects
+------------------------------------------------------------------------------------*/
+.calculator {
+  display: inline-block; }
+
+.result {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding-left: 10px;
+  box-shadow: inset 0px 0px 10px #E9E9E9; }
+
+.calc-wrapper {
+  display: flex; }
+
+.calc {
+  display: inline-flex;
+  flex-wrap: wrap; }
+  .calc:not(:last-child) {
+    border-right: 1px solid #D1D1D1; }
+  .calc.no {
+    width: 241px; }
+  .calc.eq {
+    border-left: 1px solid #D1D1D1; }
+  .calc.fn, .calc.eq {
+    width: 80px; }
+
+.btn {
+  position: relative;
+  flex: 0 0 80px;
+  height: 80px;
+  margin: 0;
+  background-color: #E9E9E9;
+  border: 0; }
+  .btn:hover {
+    cursor: pointer;
+    background-color: #D1D1D1; }
+  .btn.clear {
+    flex: 0 0 160px; }
+  .btn.eq {
+    height: 100%; }
+
+.calc.no .btn:first-child:after,
+.calc.no .btn:nth-child(2):after,
+.calc.no .btn:nth-child(4):after,
+.calc.no .btn:nth-child(5):after,
+.calc.no .btn:nth-child(7):after,
+.calc.no .btn:nth-child(8):after,
+.calc.no .btn:nth-child(10):after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: -1px;
+  width: 2px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #D1D1D1;
+  transform: translateY(-50%); }
+
+.calc.no .btn:not(:nth-last-child(-n+2)):before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: -1px;
+  left: 50%;
+  width: 50px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: #D1D1D1;
+  transform: translateX(-50%); }
+
+.calc.fn .btn:not(:last-child):after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: -1px;
+  left: 50%;
+  width: 50px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: #D1D1D1;
+  transform: translateX(-50%); }
+
+.canvas {
+  display: block;
+  width: 100%; }

@@ -1,0 +1,92 @@
+<!--Load Main HTML Layout-->
+{% extends "src/html/app/template/base.html" %}
+
+<!--Define Site Name-->
+{% set siteName = 'Calculator Page' %}
+<!-- (should stay the same on all pages) -->
+
+<!--Define Main Schema-->
+{% set schemaType = 'Article' %}
+
+<!--Define OGP type-->
+{% set opgType = 'article' %}
+
+<!--Define Twitter type and handles-->
+{% set twitterCardType = 'product' %}
+{% set twitterNameAuthor = '@author_handle' %}
+{% set twitterSite = '@site_handle' %}
+
+<!--Define Page Details-->
+{% set pageTitle = 'Calculator' %}
+{% set pageTitleName = 'Calculator' %}
+{% set pageDescription = 'Page description. No longer than 155 characters.' %}
+{% set pageUrl = 'http://www.example.com/' %}
+{% set pageImage = '../media/brand/ogp.png' %}
+
+
+<!--Define body class-->
+{% set bodyClass = '' %}
+
+<!--Main Content-->
+{% block content %}
+
+<main>
+
+  <div class="calculator">
+    <div id="result" class="result"></div>
+    <div class="calc-wrapper">
+      <div class="calc no">
+        <button class="btn" type="button" name="9" value="9" onclick="setValue(this.value)">9</button>
+        <button class="btn" type="button" name="8" value="8" onclick="setValue(this.value)">8</button>
+        <button class="btn" type="button" name="7" value="7" onclick="setValue(this.value)">7</button>
+        <button class="btn" type="button" name="6" value="6" onclick="setValue(this.value)">6</button>
+        <button class="btn" type="button" name="5" value="5" onclick="setValue(this.value)">5</button>
+        <button class="btn" type="button" name="4" value="4" onclick="setValue(this.value)">4</button>
+        <button class="btn" type="button" name="3" value="3" onclick="setValue(this.value)">3</button>
+        <button class="btn" type="button" name="2" value="2" onclick="setValue(this.value)">2</button>
+        <button class="btn" type="button" name="1" value="1" onclick="setValue(this.value)">1</button>
+        <button class="btn" type="button" name="0" value="0" onclick="setValue(this.value)">0</button>
+        <button class="btn clear" type="button" name="AC" value="AC" onclick="del()">AC</button>
+      </div>
+      <div class="calc fn">
+        <button class="btn add" type="button" name="+" value="+" onclick="setValue(this.value)">+</button>
+        <button class="btn subtract" type="button" name="-" value="-" onclick="setValue(this.value)">-</button>
+        <button class="btn multiply" type="button" name="*" value="*" onclick="setValue(this.value)">*</button>
+        <button class="btn divide" type="button" name="/" value="/" onclick="setValue(this.value)">/</button>
+      </div>
+      <div class="calc eq">
+        <button class="btn eq" type="button" name="=" value="=" onclick="calculate()">=</button>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+  <script>
+
+    function del() {
+      res.innerHTML = "";
+    }
+    
+    function setValue(el) {
+      (!flag) ? res.innerHTML += el : test(el);
+    }
+
+    function calculate() {
+      flag = true;
+      res.innerHTML = eval(res.innerHTML);
+    }
+
+    function test(el) {
+      var num = reg.test(el);
+      num ? res.innerHTML = el : res.innerHTML += el;
+      flag = false;
+    }
+
+    var res = document.getElementById('result');
+    var reg = /^\d+$/;
+    var flag = false;
+
+  </script>
+
+{% endblock %}

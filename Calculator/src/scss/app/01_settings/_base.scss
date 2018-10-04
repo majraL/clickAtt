@@ -1,0 +1,28 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+html, body {
+  font-size: $font-size;
+  font-family: $body-font-family;
+  line-height: $line-height-default;
+  letter-spacing: $letter-spacing-default;
+  color: grey;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}

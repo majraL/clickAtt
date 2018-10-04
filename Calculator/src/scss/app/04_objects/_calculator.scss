@@ -1,0 +1,119 @@
+.calculator {
+  display: inline-block; 
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding-left: 10px;
+  box-shadow: inset 0px 0px 10px $grey;
+}
+
+.calc-wrapper {
+  display: flex;
+}
+
+.calc {
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  &:not(:last-child) {
+    border-right: 1px solid $grey-dark;
+  }
+
+  &.no {
+    width: 241px;
+  }
+
+  &.eq {
+    border-left: 1px solid $grey-dark;
+  }
+
+  &.fn,
+  &.eq {
+    width: 80px;
+  }
+
+}
+
+.btn {
+  position: relative;
+  flex: 0 0 80px;
+  height: 80px;
+  margin: 0;
+  background-color: $grey;
+  border: 0;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $grey-dark;
+  }
+
+  &.clear {
+    flex: 0 0 160px;
+  }
+
+  &.eq {
+    height: 100%;
+  }
+
+}
+
+.calc.no {
+
+  .btn:first-child:after,
+  .btn:nth-child(2):after,
+  .btn:nth-child(4):after,
+  .btn:nth-child(5):after,
+  .btn:nth-child(7):after,
+  .btn:nth-child(8):after,
+  .btn:nth-child(10):after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: -1px;
+    width: 2px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $grey-dark;
+    transform: translateY(-50%);
+  }
+
+  .btn:not(:nth-last-child(-n+2)):before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    bottom: -1px;
+    left: 50%;
+    width: 50px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: $grey-dark;
+    transform: translateX(-50%);
+  }
+
+}
+
+.calc.fn {
+
+  .btn:not(:last-child):after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    bottom: -1px;
+    left: 50%;
+    width: 50px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: $grey-dark;
+    transform: translateX(-50%);
+  }
+
+}
+
+.canvas {
+  display: block;
+  width: 100%;
+}
